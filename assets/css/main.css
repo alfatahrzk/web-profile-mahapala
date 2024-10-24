@@ -22,7 +22,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #3d4348; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #3e5055; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #388da8; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #5f9fff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -871,10 +871,11 @@ section,
 
 .hero .hero-bg::before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 15%);
+  background: color-mix(in srgb, var(--background-color), transparent 10%);
   position: absolute;
   inset: 0;
   z-index: 2;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* Adjust colors as needed */
 }
 
 .hero .container {
@@ -884,6 +885,7 @@ section,
 
 .hero h1 {
   margin: 0;
+  margin-top: 2rem;
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
